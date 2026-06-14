@@ -41,8 +41,7 @@ This tool solves that problem by generating concise, engaging, and professional 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ai-linkedin-post-writer.git
-cd ai-linkedin-post-writer
+https://github.com/lakshminarayanav999/AI-LinkedIn-Post-Writer.git
 ```
 
 ### 2. Install Dependencies
