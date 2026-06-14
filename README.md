@@ -31,7 +31,6 @@ This tool solves that problem by generating concise, engaging, and professional 
 
 * Python
 * Hugging Face Transformers
-* PyTorch
 * Google FLAN-T5 Base Model
 
 ---
