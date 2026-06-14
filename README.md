@@ -63,21 +63,23 @@ python main.py
 Example Input:
 
 ```text
-Project Name: CBC FAQ Bot
-Project Description: Answers community questions automatically
-Technologies Used: Python, NLP
+Project Name: AI-LinkedIn-Post-writer
+Project Description: A Python-based  AI application that uses FLAN-T5 to generate professional LinkedIn posts from user-provided project details, demonstrating practical LLM integration and prompt engineering.
+Technologies Used: Python, NLP, hugging face transformers
 ```
 
 Example Output:
 
 ```text
-Excited to share my latest project, CBC FAQ Bot! 🚀
+🚀 Excited to share my latest project: AI LinkedIn Post Writer!
 
-Built using Python and NLP, this project helps answer community questions efficiently and improves access to information.
+This application uses Generative AI to help users create professional LinkedIn posts by simply providing project details such as the project name, description, and technologies used.
 
-Working on this project helped me strengthen my problem-solving and AI development skills. Looking forward to building more impactful solutions!
+Built with Python, Hugging Face Transformers, PyTorch, and Google's FLAN-T5 model, this project gave me hands-on experience with LLM integration, prompt engineering, and AI-powered text generation.
 
-#Python #AI #MachineLearning #Project
+Looking forward to exploring more real-world applications of Generative AI and Natural Language Processing.
+
+#AI #GenerativeAI #Python #MachineLearning #LLM #NLP #OpenSource
 ```
 
 ---
@@ -92,13 +94,28 @@ writer = pipeline(
     model="google/flan-t5-base"
 )
 
-prompt = """
-Write a short, friendly LinkedIn post about a project called
-CBC FAQ Bot that answers community questions using Python.
+project_name = input("Enter Project Name: ")
+project_description = input("Enter Project Description: ")
+technologies = input("Enter Technologies Used: ")
+
+prompt = f"""
+Write a professional LinkedIn post for a student developer.
+
+Project Name: {project_name}
+Project Description: {project_description}
+Technologies Used: {technologies}
+
+The post should:
+- Be professional and engaging
+- Mention key learnings
+- Highlight technologies used
+- End with relevant hashtags
+- Be suitable for posting on LinkedIn
 """
 
-result = writer(prompt, max_length=120)
+result = writer(prompt, max_length=200)
 
+print("\nGenerated LinkedIn Post:\n")
 print(result[0]["generated_text"])
 ```
 
